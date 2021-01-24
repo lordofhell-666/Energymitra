@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '_q189!a)6ee!9pjw)(gd$&^jh5hk2mh10$uwr%m@86@wx5w5f='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1']
 EMAIL_HOST = 'smtp.mailgun.org'
