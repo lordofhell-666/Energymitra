@@ -1,0 +1,26 @@
+{% load static %}
+{% for pd in product %}
+    <div class="item">
+        <div class="sw_product_box_wrapper">
+            <div class="sw_product_indx_img_wrapper">
+
+                <img src="/media/{{pd.image}}">
+            </div>
+
+            <div class="sw_product_indx_img_cont_wrapper">
+                <div class="sw_pdct_img">
+                    <img src="{% static '' %}images/line.png" alt="img" />
+                </div>
+                <h5><a href="{% url 'home:product_detail' pd.slug %}">Buy now</a></h5>
+                <h1><a href="{% url 'home:product_detail' pd.slug %}">{{pd.title}}</a></h1>
+                <div class="cc_li_img_overlay">
+                    <div class="cc_li_img_text">
+                        <ul>
+                            <li><a href="{% url 'home:product_detail' pd.slug %}">{{pd.d_price}}</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %} 

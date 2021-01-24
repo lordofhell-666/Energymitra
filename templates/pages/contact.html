@@ -1,0 +1,171 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block meta %}
+<title>About Us</title>
+<meta name="description" content="smart pest" />
+<meta name="keywords" content="solar system /sun & wind" />
+{% endblock meta %} 
+
+{% block extra_scripts %}
+<link rel="stylesheet" type="text/css" href="{% static '' %}css/style_2.css" />
+<link rel="stylesheet" type="text/css" href="{% static '' %}css/responsive_2.css" />
+{% endblock extra_scripts %}
+
+{% block body %}
+{% include 'components/nav2.html' %}
+    <div class="page_title_section">
+        <div class="page_header">
+            <div class="container">
+                <div class="row">
+                    <!-- section_heading start -->
+                    <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+
+                        <div class="sub_title_section">
+                            <ul class="sub_title">
+                                <li><a href="#"> Home </a></li>
+                                <li> Contact Us</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--sw about us top start-->
+    <div class="sw_about_top_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                    <div class="sw_abot_top_txt_wrapper">
+
+                        <div class="sw_left_heading_wraper sw_dark_heading_wraper">
+                            <h1>contact us for queries</h1>
+                            <img src="images/hd_line_dark.png" alt="title">
+                            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimnim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                    <div class="sw_about_top_img">
+                        <img src="images/iner_contactt.png" alt="img">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--sw about us top end-->
+        <!-- Google Map start-->
+   <div id='map'>
+	</div>
+    <!-- Google Map end-->
+    <!-- contact us section start -->
+    <div class="contact-section">
+        <div class="container">
+            <div class="holder">
+                <div class=" row">
+                    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                        <form method="POST">
+                        {% csrf_token %}
+                            <div class="sw_left_heading_wraper">
+                                <h1>Fill Free Contact Us</h1>
+                                <img src="images/heading_line.png" alt="title">
+                                <p>Donec quis magna sit amet risus vulputate maximus eget eget arcu.
+                                    <br> Praesent sed molestie tortor. </p>
+                            </div>
+                             <div class="row">
+                                <div class="col-md-6">
+                                    {{ form.name|as_crispy_field }}
+                                </div>
+                                <div class="col-md-6">
+                                    {{ form.email|as_crispy_field }}
+                                </div>
+                                <div class="col-md-12">
+                                    {{ form.category|as_crispy_field }}
+                                </div>
+
+                                <div class="col-md-12">
+                                    {{ form.message|as_crispy_field }}</textarea>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <!-- response area for validation of Form-->
+                                    <div class="cntct_2_btn_wrapper cntct_2_btn_inner">
+                                        <!-- <button type="button" class=" waves-effect waves-light waves-ripple">send</button> -->
+                                        <button type="submit" class=" waves-effect waves-light waves-ripple">send</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+
+                        <div class="contact-box">
+                            <div class="wrapper_second_useful_2">
+                                <div class="sw_left_heading_wraper sw_dark_heading_wraper ppp">
+                                    <h1>contact info</h1>
+                                    <img src="images/hd_line_dark.png" alt="title">
+                                    <p>Donec quis amet risus vulputate maximus eget eget arcu.</p>
+                                </div>
+                               <ul>
+									<li>
+                                     <h1>+800 568 322</h1></li>
+									 <li><a href="#"><i class="flaticon-new-email-outline"></i>sunwind@example.com</a>
+                                    </li>
+									 <li><a href="#"><i class="flaticon-internet"></i>www.example.com</a>
+                                    </li>
+                                  
+                                    <li><i class="flaticon-placeholder"></i>Timposn, Suite 247 USA, 222
+                                                                    
+                                </ul>
+                            </div>
+                            <div class="abotus_content">
+
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+                                    <li class="hidden-xs"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <!-- sw footer section start-->
+    <div class="sw_footer_main_wrapper">
+
+        <div class="circle_btm">
+            <a href="javascript:" id="return-to-top"><i class="fa fa-long-arrow-up"></i></a>
+        </div>
+        {% include 'components/footer.html' %}
+
+    </div>
+    <!-- sw footer section end-->
+    <!--main js files-->
+
+
+    {% endblock body %}
+    <!--js code-->
+    {% block extra_java %}
+    <script src="{% static '' %}js/custom_2.js"></script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyoVZdluz1UBmnCyPncvgxnbOg2kO_2DRBRev2LkZUTFUSk1iXqpP-3/exec'
+        const form = document.forms['submit-to-google-sheet']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+
+        })
+    </script>
+
+    {% endblock extra_java %}

@@ -1,0 +1,266 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block meta %}
+    <title>Energymitra - Energy for future</title>
+    <meta name="description" content="Energymitra One Stop Shop for all your energy needs" />
+    <meta name="keywords" content="solar system /sun & wind" />
+{% endblock meta %}
+
+{% block extra_scripts %}
+<link rel="stylesheet" type="text/css" href="{% static '' %}css/style.css" />
+<link rel="stylesheet" type="text/css" href="{% static '' %}css/responsive.css" />
+<link rel="stylesheet" type="text/css" href="{% static '' %}js/plugin/rs_slider/layers.css" />
+<link rel="stylesheet" type="text/css" href="{% static '' %}js/plugin/rs_slider/navigation.css" />
+<link rel="stylesheet" type="text/css" href="{% static '' %}js/plugin/rs_slider/settings.css" />
+{% endblock extra_scripts %}
+
+{% block body %}
+<div data-scroll='0' class="full_width">
+    {% include 'components/nav.html' %}
+
+    <!--sw header wrapper end-->
+    <!--sw slider wrapper start-->
+    {% include 'components/slider.html' %}
+</div>
+    <!-- sw slider section end-->
+    <!-- sw spectrum section start-->
+    <div data-scroll='1' class="full_width">
+        <div class="sw_spectrum_wrapper">
+            {% include 'components/spectrum.html' %}
+        </div>    
+    </div>
+    <!--sw spectrum wrapper end-->
+    <!--sw discover wrapper start-->
+    {% include 'components/wrapper_whyus2.html' %}
+    <!-- sw discover section end-->
+    <!-- sw project section start-->
+    <div class="sw_project_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-xs-12 col-sm-12 col-lg-offset-3">
+                    <div class="sw_left_heading_wraper sw_center_heading_wrapper">
+                        <h1>Our Incredible Projects</h1>
+                        <img src="images/heading_line.png" alt="title">
+                        <p>Donec quis magna sit amet risus vulputate maximus eget eget arcu. Praesent sed molestie tortor. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gallery-area">
+
+            <div class="row">
+                <div id="gallery">
+        
+
+                    <div class="grid galler_2_btm_section">
+                        {% for i in projectlist %}
+                        
+                        <div class="grid-item  * pd_2">
+                            <div class="gallery-list img-effect zoom-slow">
+                                <div class="sp_img_box_overlay"></div>
+                                <div class="over">
+
+                                    <img src="/media/{{i.image}}" alt="" class="img-responsive" />
+
+                                    <div class="tab_img_overlay">
+                                        <a href="/media/{{i.image}}" class="venobox info" data-title="{{i.title}}" data-gall="gall12">
+                                            <i class="fa fa-arrows-alt"></i> </a>
+                                        <h1>{{i.title}}</h1>
+                                        <p></p>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- sw project section end-->
+    <!--sw newsletter wrapper start-->
+    {% include 'components/wrapper_quote.html' %}
+    <!--sw newsletter wrapper end-->
+    <!-- sw choose service wrapper start-->
+    {% include 'components/wrapper_whyus.html' %}
+    <!-- sw choose service wrapper end-->
+    <!--sw testimonial wrapper start-->
+    {% include 'components/testimonial.html' %}
+
+    <!--sw testimonial wrapper end-->
+    <!--sw best product wrapper start-->
+    {% include 'components/wrapper_product.html' %}
+    <!--sw best product wrapper end-->
+
+    <!--sw leads wrapper start-->
+    <div class="sw_leads_wrapper">
+        <div class="discover_overlay"></div>
+        <div class="sw_banner_bottom_shap_img_wrapper">
+            <img src="{% static '' %}images/image11.png" alt="shape">
+        </div>
+        <div class="container">
+            <div class="row">
+                {% include 'components/wrapper_benifit.html' %}
+                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                    <div class="sw_road_leads_img">
+                        <img src="{% static '' %}images/leads.gif" alt="img">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sw_banner_bottom_shap_img_wrapper">
+            <img src="{% static '' %}images/image.png" alt="shape">
+        </div>
+    </div>
+    
+    <!-- sw leads section end-->
+
+    <!-- sw pricing section start-->
+    {% include 'components/pricing.html' %}
+    <!-- sw pricing section end-->
+    <!-- sw contact form section start-->
+    {% include 'components/contact.html' %}
+    <!-- sw contact form section end-->
+    <!-- sw news section start-->
+    <div class="sw_news_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-xs-12 col-sm-12 col-lg-offset-3">
+                    <div class="sw_left_heading_wraper sw_center_heading_wrapper">
+                        <h1>Latest News Today</h1>
+                        <img src="images/heading_line.png" alt="title">
+                        <p>Donec quis magna sit amet risus vulputate maximus eget eget arcu. Praesent sed molestie tortor. </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="btc_blog_indx_box_wrapper">
+                        <div class="btc_blog_indx_img_wrapper">
+                            <img src="images/news_1.jpg" alt="blog_img">
+                            <div class="btc_blog_indx_date_wrapper">
+                                <a href="#!" class="waves-effect waves-light waves-ripple"><i class="fa fa-long-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="btc_blog_indx_cont_wrapper">
+                            <p>june 16,2018</p>
+                            <h5>Electricity is on track for what about decarbonising heat?</h5>
+
+                        </div>
+                        <div class="btc_blog_indx_cont_bottom">
+                            <div class="btc_blog_indx_cont_bottom_left">
+                                <p><i class="fa fa-user"></i> &nbsp;<a href="#">by Akshay</a></p>
+                            </div>
+                            <div class="btc_blog_indx_cont_bottom_right">
+                                <p><i class="fa fa-comments-o"></i> &nbsp;<a href="#">04 Comm.</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="btc_blog_indx_box_wrapper">
+                        <div class="btc_blog_indx_img_wrapper">
+                            <img src="images/news_2.jpg" alt="blog_img">
+                            <div class="btc_blog_indx_date_wrapper">
+                                <a href="#!" class="waves-effect waves-light waves-ripple"><i class="fa fa-long-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="btc_blog_indx_cont_wrapper">
+                            <p>june 16,2018</p>
+                            <h5> Electricity is on track for what about decarbonising heat?</h5>
+
+                        </div>
+                        <div class="btc_blog_indx_cont_bottom">
+                            <div class="btc_blog_indx_cont_bottom_left">
+                                <p><i class="fa fa-user"></i> &nbsp;<a href="#">by Akshay</a></p>
+                            </div>
+                            <div class="btc_blog_indx_cont_bottom_right">
+                                <p><i class="fa fa-comments-o"></i> &nbsp;<a href="#">04 Comm.</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="btc_blog_indx_box_wrapper btc_blog_padder">
+                        <div class="btc_blog_indx_img_wrapper">
+                            <img src="images/news_3.jpg" alt="blog_img">
+                            <div class="btc_blog_indx_date_wrapper">
+                                <a href="#!" class="waves-effect waves-light waves-ripple"><i class="fa fa-long-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="btc_blog_indx_cont_wrapper">
+                            <p>june 16,2018</p>
+                            <h5>Electricity is on track for what about decarbonising heat?</h5>
+
+                        </div>
+                        <div class="btc_blog_indx_cont_bottom">
+                            <div class="btc_blog_indx_cont_bottom_left">
+                                <p><i class="fa fa-user"></i> &nbsp;<a href="#">by Akshay</a></p>
+                            </div>
+                            <div class="btc_blog_indx_cont_bottom_right">
+                                <p><i class="fa fa-comments-o"></i> &nbsp;<a href="#">04 Comm.</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- sw news section end-->
+
+
+
+    <!--sw our newsletter wrapper start-->
+    <div class="sw_our_newsletter_wrapper">
+        <div class="discover_overlay"></div>
+        <div class="sw_banner_bottom_shap_img_wrapper">
+            <img src="{% static '' %}images/image11.png" alt="shape">
+        </div>
+        <div class="container">
+            {% include 'components/subscribe.html' %}
+        </div>
+        <div class="sw_banner_bottom_shap_img_wrapper">
+            <img src="{% static '' %}images/image.png" alt="shape">
+        </div>
+    </div>
+
+    <!-- sw our newsletter section end-->
+
+
+
+    <!-- sw partners section start-->
+    {% include 'components/partners.html' %}
+    <!-- sw partners section end-->
+    <!-- sw footer section start-->
+    <div class="sw_contact_form_wrapper">
+        <div class="discover_overlay"></div>
+		
+        <div class="sw_banner_bottom_shap_img_wrapper">
+            <img src="images/shape.png" alt="shape">
+        </div>
+        {% include 'components/footer.html' %}
+
+    </div>
+    <!-- sw footer section end-->
+{% endblock body %}
+{% block extra_java %}
+        <script src="{% static '' %}js/plugin/rs_slider/jquery.themepunch.revolution.min.js"></script>
+        <script src="{% static '' %}js/plugin/rs_slider/jquery.themepunch.tools.min.js"></script>
+        <script src="{% static '' %}js/plugin/rs_slider/revolution.addon.snow.min.js"></script>
+        <script src="{% static '' %}js/plugin/rs_slider/revolution.extension.actions.min.js"></script>
+        <script src="{% static '' %}js/plugin/rs_slider/revolution.extension.carousel.min.js"></script>
+        <script src="{% static '' %}js/plugin/rs_slider/revolution.extension.kenburn.min.js"></script>
+        <script src="{% static '' %}js/plugin/rs_slider/revolution.extension.layeranimation.min.js"></script>
+        <script src="{% static '' %}js/plugin/rs_slider/revolution.extension.migration.min.js"></script>
+        <script src="{% static '' %}js/plugin/rs_slider/revolution.extension.navigation.min.js"></script>
+        <script src="{% static '' %}js/plugin/rs_slider/revolution.extension.parallax.min.js"></script>
+        <script src="{% static '' %}js/plugin/rs_slider/revolution.extension.slideanims.min.js"></script>
+        <script src="{% static '' %}js/plugin/rs_slider/revolution.extension.video.min.js"></script>
+        <script src="{% static '' %}js/custom.js"></script>
+{% endblock extra_java %}
+

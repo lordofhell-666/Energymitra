@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block meta %}
+<title>About Us</title>
+<meta name="description" content="smart pest" />
+<meta name="keywords" content="solar system /sun & wind" />
+{% endblock meta %} 
+
+{% block extra_scripts %}
+<link rel="stylesheet" type="text/css" href="{% static '' %}css/style_2.css" />
+<link rel="stylesheet" type="text/css" href="{% static '' %}css/responsive_2.css" />
+{% endblock extra_scripts %}
+
+{% block body %}
+{% include 'components/nav2.html' %}
+
+    <!-- page_title_section start -->
+    <div class="page_title_section">
+        <div class="page_header">
+            <div class="container">
+                <div class="row">
+                    <!-- section_heading start -->
+                    <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+
+                        <div class="sub_title_section">
+                            <ul class="sub_title">
+                                <li><a href="{% url 'home:index'%}"> Home </a></li>
+                                <li> about us</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- page_title_section end -->
+    <!--sw about us top start-->
+    <div class="sw_about_top_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                    <div class="sw_abot_top_txt_wrapper">
+
+                        <div class="sw_left_heading_wraper sw_dark_heading_wraper">
+                            <h1>Our Company Overview</h1>
+                            <img src="{% static '' %}images/hd_line_dark.png" alt="title">
+                            <p>Energymitra is a leader in the Sustainable energy market, with business units in production and distribution, project services centered around locals. We offer a full-service portfolio for SOLAR PROJECTS and LUMINARIES of all scales that includes advisory, procurement, engineering, project development and construction services.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                    <div class="sw_about_top_img">
+                        <img src="{% static '' %}images/iner_abt.png" alt="img">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--sw about us top end-->
+    <!--sw about us top start-->
+    <div class="sw_abt_btm_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                    <div class="sw_road_leads_img">
+                        <img src="{% static '' %}images/leads.gif" alt="img">
+
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                    <div class="sw_left_heading_wraper sw_abt_tp_txt">
+                        <h1>Want to Know About Us?</h1>
+                        <img src="{% static '' %}images/heading_line.png" alt="title">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do smod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis rud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis ate irure dolor in reprehenderit in luptate velit esse cillum dolore eu fugiat nulla atur. Excepteur sint caecat cupidatat non laboris nisi ut aliquip ex ea commodo cons fugiat nulla atur. Excepteur sint caecat cupidatat non proiden. Ut enim ad minim veniam, quirud exercitation ullam proiden. Ut enim ad minim veniam, quirud exercitation ullamco laboris nisi ut aliquip ex.
+                        </p>
+                        <br>
+                        <p>ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis rud exercitation ullamco laboris nisi ut aliquip ex ea commodo cons fugiat nulla atur. Excepteur sint caecat cupidatat non proiden. Ut enim ad minim veniam, quirud exercitation ullam</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--sw about us top end-->
+    <!--sw spectrum wrapper start-->
+    <div class="sw_abt_spectrum_wrapper">
+        {% include 'components/spectrum.html' %}
+    </div>
+    <!--sw spectrum wrapper end-->
+    <!--sw leads wrapper start-->
+    <div class="sw_leads_wrapper">
+
+        <div class="container">
+            <div class="row">
+                {% include 'components/wrapper_benifit.html' %}
+                {% include 'components/mission_vision.html' %}
+            </div>
+        </div>
+    </div>
+    <!-- sw leads section end-->
+    <!--sw best product wrapper start-->
+    {% include 'components/team.html' %}
+    <!--sw best product wrapper end-->
+    <!--sw newsletter wrapper start-->
+    {% include 'components/wrapper_quote.html' %}
+    <!--sw newsletter wrapper end-->
+    <!-- sw choose service wrapper start-->
+    {% include 'components/wrapper_whyus.html' %}
+    <!-- sw choose service wrapper end-->
+    <!--sw our newsletter wrapper start-->   
+    <div class="sw_our_newsletter_wrapper">
+
+        <div class="container">
+            {% include 'components/subscribe.html' %}
+        </div>
+    </div>
+    <!-- sw our newsletter section end-->
+    <!-- sw partners section start-->
+    {% include 'components/partners.html' %}
+    <!-- sw partners section end-->
+    <!-- sw footer section start-->
+    <div class="sw_footer_main_wrapper">
+
+        <div class="circle_btm">
+            <a href="javascript:" id="return-to-top"><i class="fa fa-long-arrow-up"></i></a>
+        </div>
+        {% include 'components/footer.html' %}
+
+    </div>
+    <!-- sw footer section end-->
+    <!--main js files-->
+
+
+    {% endblock body %}
+    <!--js code-->
+    {% block extra_java %}
+    <script src="{% static '' %}js/custom_2.js"></script>
+    {% endblock extra_java %}

@@ -1,0 +1,45 @@
+{% load static %}
+<div class="gallery-area">
+
+    <div class="row">
+        <div id="gallery">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="filter filter-demo portfolio-nav galery_2_wraper my_slide_filter">
+                    <ul>
+                        <li class="button galery_hover_div is-checked waves-effect waves-light waves-ripple" data-filter="*">
+                            all
+                        </li>
+                        {% for c in category %}
+                        <li class="button galery_hover_div waves-effect waves-light waves-ripple" data-filter=".{{c.name}}">
+                            {{c.name}}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+            {% for i in projectlist %}
+            <div class="grid galler_2_btm_section">
+                <div class="grid-item  *{{i.project_catg}}">
+                    <div class="gallery-list img-effect zoom-slow">
+                        <div class="sp_img_box_overlay"></div>
+                        <div class="over">
+
+                            <img src="/media/{{i.image}}" alt=""  />
+                            <div class="tab_img_overlay">
+
+                                <a href="{{i.image}}" class="venobox info" data-title="{{i.title}}" data-gall="gall12">
+                                    <i class="fa fa-arrows-alt"></i> </a>
+                                <h1>{{i.title}}</h1>
+                                <p>{{i.project_catg}}</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}    
+        </div>
+    </div>
+
+</div>

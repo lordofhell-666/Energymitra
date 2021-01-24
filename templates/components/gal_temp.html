@@ -1,0 +1,30 @@
+{% load static %}
+<div class="gallery-area">
+
+    <div class="row">
+        <div id="gallery">
+                {% for i in projectlist %}
+                <div class="grid-item">
+                    <div class="gallery-list img-effect zoom-slow">
+                        <div class="sp_img_box_overlay"></div>
+                        <div class="over">
+
+                            <img src="{{i.image}}" alt=""  />
+                            <div class="tab_img_overlay">
+
+                                <a href="{{i.image}}" class="venobox info" data-title="{{i.title}}" data-gall="gall12">
+                                    <i class="fa fa-arrows-alt"></i> </a>
+                                <h1>{{i.title}}</h1>
+                                <p>{{i.project_catg}}</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            
+
+        </div>
+    </div>
+
+</div>

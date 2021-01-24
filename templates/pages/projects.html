@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block meta %}
+<title>About Us</title>
+<meta name="description" content="smart pest" />
+<meta name="keywords" content="solar system /sun & wind" />
+{% endblock meta %} 
+
+{% block extra_scripts %}
+<link rel="stylesheet" type="text/css" href="{% static '' %}css/style_2.css" />
+<link rel="stylesheet" type="text/css" href="{% static '' %}css/responsive_2.css" />
+{% endblock extra_scripts %}
+
+{% block body %}
+{% include 'components/nav2.html' %}
+<div class="page_title_section">
+        <div class="page_header">
+            <div class="container">
+                <div class="row">
+                    <!-- section_heading start -->
+                    <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+
+                        <div class="sub_title_section">
+                            <ul class="sub_title">
+                                <li><a href="#"> Home </a></li>
+                                <li> Project full width</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--sw about us top start-->
+    <div class="sw_about_top_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                    <div class="sw_abot_top_txt_wrapper">
+
+                        <div class="sw_left_heading_wraper sw_dark_heading_wraper">
+                            <h1>Our best project</h1>
+                            <img src="images/hd_line_dark.png" alt="title">
+                            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimnim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                    <div class="sw_about_top_img">
+                        <img src="images/iner_prjct.png" alt="img">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--sw about us top end-->
+    <div class="sw_project_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-xs-12 col-sm-12 col-lg-offset-3">
+                    <div class="sw_left_heading_wraper sw_center_heading_wrapper">
+                        <h1>Our Incredible Projects</h1>
+                        <img src="images/heading_line.png" alt="title">
+                        <p>Donec quis magna sit amet risus vulputate maximus eget eget arcu. Praesent sed molestie tortor. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% include 'components/gal_temp.html'%}
+    </div>
+    {% include 'components/footer2.html'%}
+{% endblock body %}
+        {% block extra_java %}
+    <script src="{% static '' %}js/custom_2.js"></script>
+    {% endblock extra_java %}

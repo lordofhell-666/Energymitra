@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block meta %}
+<title>About Us</title>
+<meta name="description" content="smart pest" />
+<meta name="keywords" content="solar system /sun & wind" />
+{% endblock meta %} 
+
+{% block extra_scripts %}
+<link rel="stylesheet" type="text/css" href="{% static '' %}css/style_2.css" />
+<link rel="stylesheet" type="text/css" href="{% static '' %}css/responsive_2.css" />
+{% endblock extra_scripts %}
+
+{% block body %}
+{% include 'components/nav2.html' %}
+    <!--sw header wrapper end-->
+    <!-- page_title_section start -->
+    <div class="page_title_section">
+        <div class="page_header">
+            <div class="container">
+                <div class="row">
+                    <!-- section_heading start -->
+                    <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+
+                        <div class="sub_title_section">
+                            <ul class="sub_title">
+                                <li><a href="#"> Home </a></li>
+                                <li> 404 Error</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- page_title_section end -->
+    <!-- error wrapper start -->
+    <div class="sw_error_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                    <div class="main_wrapper_three_img">
+                        <img src="images/error_img.png" class="img-responsive" alt="img" />
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                    <div class="main_wrapper_three_content">
+                        <h2>
+                            <span>4</span>
+                            <span>0</span>
+                            <span>4</span>
+                        </h2>
+                        <h3>Sorry, This Page Isn't available :(</h3>
+                        <img src="images/heading_line.png" alt="title">
+                        <p>Find what you're looking for by browsing the links below or searching down Below.</p>
+                        <div class="prs_newsletter_field eror_form_btn">
+                            <input type="text" placeholder="Email*">
+                            <button type="submit" class="waves-effect waves-light waves-ripple">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- error wrapper end -->
+
+    <!--sw our newsletter wrapper start-->
+    {% include 'components/subscribe2'%}
+    <!-- sw our newsletter section end-->
+    <!-- sw footer section start-->
+    <div class="sw_footer_main_wrapper">
+
+        <div class="circle_btm">
+            <a href="javascript:" id="return-to-top"><i class="fa fa-long-arrow-up"></i></a>
+        </div>
+        {% include 'components/footer.html' %}
+
+    </div>
+    <!-- sw footer section end-->
+    <!--main js files-->
+
+
+    {% endblock body %}
+    <!--js code-->
+    {% block extra_java %}
+    <script src="{% static '' %}js/custom_2.js"></script>
+    {% endblock extra_java %}

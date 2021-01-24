@@ -1,0 +1,91 @@
+{% load static %}
+<div class="transparent-menu header-area hidden-menu-bar stick">
+
+    <div class="container-fluid">
+
+        <div class="bt_main_menu_wrapper">
+            <div class="main-menu-wrapper clear-fix">
+
+                <div class="logo float-left">
+                    <a href="{% url 'home:index' %}"><img src="{% static '' %}images/hd_logo.png" class="img-responsive" alt="logo"></a>
+                </div>
+
+            </div>
+            <div class="sc_navigation hidden-sm hidden-xs">
+                <nav id="primary-nav" class="dropdown nav_left_margin">
+                    <ul class="dropdown menu navigation cart_dropdown_wrapper">
+                        <li><a href="{% url 'home:index' %}" title="">Home</a>
+                        </li>
+                        <li><a href="{% url 'home:about' %}" title="">about us</a>
+                        </li>
+                        <li><a href="{% url 'home:services' %}" title="">services</a>
+                        </li>
+                        <li><a href="{% url 'home:projects' %}" title="">projects</a>
+                        </li>
+                        <li><a href="{% url 'home:shop' %}" title="">shop</a>
+                        </li>
+                        <li><a href="{% url 'home:contact' %}" title="">Contact us</a>
+                        </li>
+                        <!-- Menu -->
+                    </ul>
+                    <!--search -->
+                    <div class="header_right_main_wrapper">
+                        <div class="search-wrapper">
+                            <div class="et_navbar_search_wrapper hidden-xs">
+                                <div class="et_search_bar" id="search_button">
+                                    <a href="#"><i class="fa fa-search waves-effect waves-light" aria-hidden="true"></i></a>
+                                </div>
+                                <div id="search_open" class="et_search_box">
+                                    <input type="text" placeholder="Search text...">
+                                    <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header_btn">
+                            <ul>
+                                <li>
+                                    <a href="#!" class="waves-effect waves-light waves-ripple">free quote</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </nav>
+            </div>
+            <!-- /.main-menu-wrapper -->
+            <!-- mobile menu area start -->
+            <div class="mobile-menu-area visible-sm visible-xs">
+                <div class="container-fluid header_container">
+                    <div class="row">
+
+                        <div class="col-xs-12 cc_menu_top_margin">
+                            <!-- mobile menu start -->
+                            <div class="mobile-menu">
+                                <nav>
+                                    <ul class="nav">
+                                        <li><a href="{% url 'home:index' %}" title="">Home</a>
+                                        </li>
+                                        <li><a href="{% url 'home:about' %}" title="">about us</a>
+                                        </li>
+                                        <li><a href="{% url 'home:services' %}" title="">services</a>
+                                        </li>
+                                        <li><a href="{% url 'home:projects' %}" title="">projects</a>
+                                        </li>
+                                        <li><a href="{% url 'home:projects' %}" title="">shop</a>
+                                        </li>
+                                        <li><a href="{% url 'home:contact' %}" title="">Contact us</a>
+                                        </li>  
+                                    </ul>
+                                </nav>
+                            </div>
+                            <!-- mobile menu end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- mobile menu area end -->
+
+            <!-- /.main-menu-wrapper -->
+        </div>
+    </div>
+</div>
